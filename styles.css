@@ -1,0 +1,315 @@
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    padding: 0 20px; /* Add padding on the sides */
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    /* other properties remain the same */
+}
+
+/* Apply 'Karla' to all paragraph text */
+p {
+    font-family: 'Karla', sans-serif;
+    font-weight: 300; /* Light weight */
+    line-height: 1.6; /* Optional: Improve readability with more line spacing */
+    color: var(--text-color); /* Maintain the current color scheme */
+    margin-bottom: 15px; /* Optional: Add spacing between paragraphs */
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center all items horizontally */
+    padding: 10px 0;
+    background-color: var(--header-background);
+    position: relative;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center; /* Spread out logo and other elements */
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Optional: Limits the header width */
+}
+
+.logo {
+    height: 50px;
+    /* Ensure logo has no margins that could push it off-center */
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    margin-left: 0px; /* Adjust this as needed for spacing between logo and other elements */
+}
+
+nav {
+    margin-top: 10px; /* Adds some space between the header and nav */
+    width: 100%; /* Ensure nav takes full width */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Center the navigation links */
+    width: 100%; /* Ensure nav ul takes full width */
+}
+
+.logo {
+    height: 50px;
+    margin: 0 auto;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    margin-left: 20px; /* Spacing between logo and search/button */
+}
+
+.search-bar {
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.toggle-theme {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Streamlined Search Bar */
+.search-bar {
+    padding: 10px 15px;
+    margin-right: 10px;
+    border-radius: 25px; /* Rounded corners */
+    border: 1px solid var(--accent-color); /* Border color matching the accent */
+    width: 250px; /* Wider search bar */
+    outline: none;
+    transition: all 0.3s ease; /* Smooth transition */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.search-bar:focus {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Slightly larger shadow on focus */
+    border-color: var(--hover-text-color); /* Accent border on focus */
+}
+
+/* Streamlined Toggle Button */
+.toggle-theme {
+    padding: 10px 20px;
+    border-radius: 25px; /* Pill-shaped button */
+    background-color: var(--accent-color); /* Accent color background */
+    color: #fff; /* White text */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth color change and button press effect */
+}
+
+.toggle-theme:hover {
+    background-color: var(--hover-text-color); /* Change background on hover */
+}
+
+.toggle-theme:active {
+    transform: scale(0.95); /* Button press effect */
+}
+
+/* Adjustments for the icon inside the button */
+.toggle-theme .icon {
+    font-size: 20px; /* Adjust size for better appearance */
+    display: inline-block;
+    transition: transform 0.3s ease; /* Smooth transition for icon */
+}
+
+.toggle-theme:hover .icon {
+    transform: rotate(20deg); /* Slight rotation effect on hover */
+}
+
+
+nav {
+    margin-top: 10px; /* Adds some space between the header and nav */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--link-color);
+    font-weight: bold;
+    position: relative;
+    padding: 10px 15px;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--accent-color);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+    transform: scaleX(1);
+}
+
+nav ul li a:hover {
+    color: var(--hover-text-color);
+}
+
+nav ul li a.active {
+    background-color: var(--active-background-color);
+    color: var(--active-text-color);
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+/* Section Styles */
+main {
+    padding: 20px 0;
+    max-width: 1200px; /* Optional: Limits the main content width */
+    margin: 0 auto; /* Center the main content */
+}
+
+/* Modern Container Styles */
+.section {
+    padding: 30px;
+    background-color: var(--section-background-color);
+    border-radius: 12px; /* Soft rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle box shadow for floating effect */
+    margin-bottom: 30px; /* Space between sections */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 768px) {
+    .section {
+        padding: 20px; /* Reduce padding on smaller screens */
+    }
+}
+
+.section {
+    padding: 20px;
+    color: var(--section-text-color);
+}
+
+.section-1 {
+    background-color: var(--section1-background);
+    color: var(--section-text);
+}
+
+.section-2 {
+    background-color: var(--section2-background);
+    color: var(--section-text);
+}
+
+.section-3 {
+    background-color: var(--section3-background);
+    color: var(--section-text);
+}
+
+.section-4 {
+    background-color: var(--section4-background);
+    color: var(--section-text);
+}
+
+.section-p {
+    color: var(--section-text);
+}
+
+/* Section 1 Image Styling */
+.section-image {
+    display: block;
+    margin: 0 auto; /* Center the image horizontally */
+    max-width: 100%; /* Image will never be wider than its container */
+    height: auto; /* Maintain aspect ratio */
+    width: 33%; /* Optional: Limit the width to 80% of its container */
+    padding-top: 2%;
+    transition: opacity 0.3s ease; /* Smooth transition for image changes */
+}
+
+#landing-banner {
+    text-align: center;
+}
+
+#slogan {
+    font-weight: normal;
+}
+
+#bold-slogan {
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: var(--footer-background);
+    margin: 0 auto;
+    max-width: 1200px; /* Optional: Limits the footer width */
+}
+
+/* Light Mode Colors */
+:root {
+    --background-color: #F2F3F5;
+    --text-color: #000;
+    --header-background: #fff;
+    --link-color: #000; /* Dark text color in light mode */
+    --hover-text-color: #c320ab;
+    --footer-background: #fff;
+    --section-text: #fff;
+    --section1-background: #c320ab;
+    --section2-background: #c320ab;
+    --section3-background: #c320ab;
+    --section4-background: #c320ab;
+    --accent-color: #c320ab;
+    --active-background-color: #c320ab; /* Highlight background color for active item */
+    --active-text-color: #fff; /* Light text color for active item */
+}
+
+/* Dark Mode Colors */
+[data-theme='dark'] {
+    --background-color: #030303;
+    --text-color: #fff;
+    --header-background: #181818;
+    --link-color: #fff; /* Light text color in dark mode */
+    --hover-text-color: #3cdf54;
+    --footer-background: #181818;
+    --section-text: #000;
+    --section1-background: #3cdf54;
+    --section2-background: #3cdf54;
+    --section3-background: #3cdf54;
+    --section4-background: #3cdf54;
+    --accent-color: #3cdf54;
+    --active-background-color: #3cdf54; /* Highlight background color for active item */
+    --active-text-color: #000; /* Dark text color for active item */
+}
+
+.mailto-link {
+    color: var(--accent-color);
+}
