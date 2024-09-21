@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if (savedTheme) {
         document.documentElement.setAttribute('data-theme', savedTheme);
         icon.textContent = savedTheme === 'dark' ? '☾' : '☼'; // Update icon based on saved theme
-        logo.src = savedTheme === 'dark' ? 'Map-Issue-square-GREEN.png' : 'Map-Issue-square.png'; // Update logo based on saved theme
-        sectionimage.src = savedTheme === 'dark' ? 'Map-Issue-LOGOTYPE-BLACK.png' : 'Map-Issue-LOGOTYPE-WHITE.png'; // Update logo based on saved theme
+        logo.src = savedTheme === 'dark' ? '/IMG/Map-Issue-square-GREEN.png' : '/IMG/Map-Issue-square.png'; // Update logo based on saved theme
+        sectionimage.src = savedTheme === 'dark' ? '/IMG/Map-Issue-LOGOTYPE-BLACK.png' : '/IMG/Map-Issue-LOGOTYPE-WHITE.png'; // Update logo based on saved theme
     }
 
     const currentPath = window.location.pathname;
@@ -36,7 +36,7 @@ toggleButton.addEventListener('click', () => {
     icon.textContent = newTheme === 'dark' ? '☾' : '☼';
 
     // Change the logo based on the new theme
-    logo.src = newTheme === 'dark' ? 'Map-Issue-square-GREEN.png' : 'Map-Issue-square.png';
-    sectionimage.src = newTheme === 'dark' ? 'Map-Issue-LOGOTYPE-BLACK.png' : 'Map-Issue-LOGOTYPE-WHITE.png';
+    logo.src = newTheme === 'dark' ? '/IMG/Map-Issue-square-GREEN.png' : '/IMG/Map-Issue-square.png';
+    sectionimage.src = newTheme === 'dark' ? '/IMG/Map-Issue-LOGOTYPE-BLACK.png' : '/IMG/Map-Issue-LOGOTYPE-WHITE.png';
 });
 
